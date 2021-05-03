@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataExtractor", "DataExtractor\DataExtractor.csproj", "{4D26D954-ABE4-4124-9715-42F86BECAB44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataExtracter", "DataExtracter\DataExtracter.csproj", "{4D26D954-ABE4-4124-9715-42F86BECAB44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

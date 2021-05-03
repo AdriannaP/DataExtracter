@@ -20,13 +20,13 @@ namespace DataExtractor
             var usersProviders = new List<(IUsersProvider, string)>();
 
             var jsonService = serviceProvider.GetService<IJsonService>();
-            usersProviders.Add((jsonService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\FirstSet.json"));
+            usersProviders.Add((jsonService, @"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\FirstSet.json"));
 
             var xmlService = serviceProvider.GetService<IXMLService>();
-            usersProviders.Add((xmlService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\SecondSet.xml"));
+            usersProviders.Add((xmlService, @"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\SecondSet.xml"));
 
             var csvService = serviceProvider.GetService<ICSVService>();
-            usersProviders.Add((csvService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\ThirdSet.csv"));
+            usersProviders.Add((csvService, @"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\ThirdSet.csv"));
 
             var printerService = serviceProvider.GetService<IPrinterService>();
             printerService.WriteToConsole(usersProviders);
