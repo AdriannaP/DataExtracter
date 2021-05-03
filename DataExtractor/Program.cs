@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 
-namespace DataExtracter
+namespace DataExtractor
 {
     class Program
     {
@@ -17,17 +17,17 @@ namespace DataExtracter
             .AddSingleton<IPrinterService, PrinterService>()
             .BuildServiceProvider();
 
-            var usersProviders = new List<IUsersProvider>();
-            
+            var usersProviders = new List<(IUsersProvider, string)>();
+
             var jsonService = serviceProvider.GetService<IJsonService>();
-            usersProviders.Add(jsonService);
-            
+            usersProviders.Add((jsonService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\FirstSet.json"));
+
             var xmlService = serviceProvider.GetService<IXMLService>();
-            usersProviders.Add(xmlService);
-            
-           var csvService = serviceProvider.GetService<ICSVService>();
-           usersProviders.Add(csvService);
-            
+            usersProviders.Add((xmlService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\SecondSet.xml"));
+
+            var csvService = serviceProvider.GetService<ICSVService>();
+            usersProviders.Add((csvService, @"C:\Users\Adrianna\source\repos\DataExtractor\DataExtractor\ThirdSet.csv"));
+
             var printerService = serviceProvider.GetService<IPrinterService>();
             printerService.WriteToConsole(usersProviders);
             Console.ReadKey();

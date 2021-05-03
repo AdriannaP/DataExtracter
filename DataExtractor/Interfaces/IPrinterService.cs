@@ -4,6 +4,6 @@ namespace DataExtractor.Interfaces
 {
     public interface IPrinterService
     {
-        void WriteToConsole(IEnumerable<IUsersProvider> usersProviders);
+        void WriteToConsole(IEnumerable<(IUsersProvider, string)> usersProviders);
     }
 }

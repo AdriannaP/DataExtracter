@@ -8,9 +8,10 @@ namespace DataExtractor.Services
     public class CSVService : ICSVService, IUsersProvider
     {
         List<User> lst = new List<User>();
-        public Users GetUsers()
+
+        public Users GetUsers(string path)
         {
-            string[] lines = File.ReadAllLines(@"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\ThirdSet.csv");
+            string[] lines = File.ReadAllLines(path);
 
 
             foreach (string line in lines)

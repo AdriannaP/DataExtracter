@@ -8,11 +8,11 @@ namespace DataExtractor.Services
 {
     public class XMLService : IXMLService, IUsersProvider
     {
-        public Users GetUsers()
+        public Users GetUsers(string path)
         {
             XmlSerializer ser = new XmlSerializer(typeof(Users));
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(@"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\SecondSet.xml");
+            xmlDoc.Load(path);
             byte[] bytes = Encoding.UTF8.GetBytes(xmlDoc.OuterXml);
             return (Users)ser.Deserialize(new MemoryStream(bytes));
         }

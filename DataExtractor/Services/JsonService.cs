@@ -6,9 +6,9 @@ namespace DataExtractor.Services
 {
     public class JsonService : IJsonService, IUsersProvider
     {
-        public Users GetUsers()
+        public Users GetUsers(string path)
         {
-            var jsonObj = JsonConvert.DeserializeObject<Users>(File.ReadAllText(@"C:\Users\Adrianna\source\repos\DataExtracter\DataExtracter\FirstSet.json"));
+            var jsonObj = JsonConvert.DeserializeObject<Users>(File.ReadAllText(path));
             return jsonObj;
         }
     }

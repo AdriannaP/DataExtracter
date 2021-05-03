@@ -11,6 +11,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.IO" Version="4.3.0" />
     <PackageReference Include="VisioForge.DotNet.Core.TRIAL" Version="14.0.39" />
+    <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
 
 </Project>
